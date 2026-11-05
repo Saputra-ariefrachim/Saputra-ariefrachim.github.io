@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arief Rachim Saputra — Product Manager & Industrial Engineer</title>
+<meta name="description" content="Product manager and industrial engineer with 5 years across fintech, agritech and travel tech. M.Eng. student at FH Südwestfalen, Germany. Open to Werkstudent PM roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   HOW TO EDIT THIS SITE (for future Arief)
+   - Colors live in :root below — change once, applies everywhere.
+   - Every section in the HTML is marked with a big comment like
+     ===== SECTION: PROJECTS =====
+   - To ADD a project: copy one whole <article class="card">...</article>
+     block and edit the text. Same for a journey <div class="stop">.
+   ============================================================ */
+:root{
+  --paper:#F6F2EA;          /* warm paper */
+  --card:#FFFDF8;
+  --ink:#1E2430;            /* soft ink, not pure black */
+  --ink-soft:#4A5163;
+  --indigo:#31549C;         /* batik indigo — main accent */
+  --indigo-deep:#22396B;
+  --bronze:#A9713A;         /* gamelan bronze — secondary accent */
+  --rail:#D9D2C4;
+  --tag-bg:#ECE6DA;
+  --radius:16px;
+  --maxw:1060px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  background:var(--paper);color:var(--ink);
+  line-height:1.65;font-size:16px;
+}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:var(--indigo);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:3px solid var(--bronze);outline-offset:3px;border-radius:4px}
+
+/* ===== nav ===== */
+nav{position:sticky;top:0;z-index:50;background:rgba(246,242,234,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rail)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-mark{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.85rem;letter-spacing:.08em;color:var(--ink);display:flex;align-items:center;gap:10px}
+.nav-mark:hover{text-decoration:none}
+.nav-mark .dot{width:9px;height:9px;border-radius:50%;background:var(--bronze)}
+.nav-links{display:flex;gap:22px;font-size:.85rem}
+.nav-links a{color:var(--ink-soft);font-weight:500}
+.nav-links a:hover{color:var(--indigo);text-decoration:none}
+@media(max-width:680px){.nav-links{display:none}}
+
+/* ===== hero ===== */
+.hero{max-width:var(--maxw);margin:0 auto;padding:76px 24px 56px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);margin-bottom:18px}
+h1{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 115;font-weight:850;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02;letter-spacing:-.015em;margin-bottom:22px}
+h1 .accent{color:var(--indigo)}
+.hero-sub{max-width:640px;font-size:1.1rem;color:var(--ink-soft);margin-bottom:30px}
+.fullname{font-size:.82rem;letter-spacing:.14em;color:var(--indigo-deep);margin-bottom:20px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:46px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.92rem;border:1.5px solid var(--ink);transition:transform .15s ease, background .15s ease;cursor:pointer}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--indigo-deep);border-color:var(--indigo-deep)}
+.btn-ghost{color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--card)}
+.fact-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border-top:1px solid var(--rail)}
+.fact{padding:18px 18px 0 0}
+.fact .k{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.fact .v{font-weight:600;margin-top:4px}
+
+/* ===== sections ===== */
+section{max-width:var(--maxw);margin:0 auto;padding:56px 24px}
+.section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
+h2{font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 112;font-weight:800;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.01em}
+.section-head .rule{flex:1;height:1px;background:var(--rail)}
+.section-head .idx{font-family:'IBM Plex Mono',monospace;color:var(--bronze);font-size:.8rem}
+
+/* ===== about narrative ===== */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+.about-prose p{margin-bottom:18px;font-size:1.03rem;color:var(--ink-soft)}
+.about-prose p strong{color:var(--ink)}
+.pull{border-left:3px solid var(--bronze);padding:6px 0 6px 18px;font-family:'Archivo',sans-serif;font-weight:700;font-size:1.25rem;line-height:1.4;color:var(--ink);margin:26px 0}
+.about-aside{background:var(--card);border:1px solid var(--rail);border-radius:var(--radius);padding:26px}
+.about-aside h3{font-family:'Archivo',sans-serif;font-weight:750;font-size:1rem;margin-bottom:14px}
+.portrait{width:100%;height:auto;border-radius:12px;margin-bottom:18px;border:1px solid var(--rail);display:block}
+.about-aside ul{list-style:none}
+.about-aside li{padding:9px 0;border-bottom:1px dashed var(--rail);font-size:.92rem;color:var(--ink-soft)}
+.about-aside li:last-child{border-bottom:none}
+.about-aside li span{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bronze);display:block}
+
+/* ===== journey rail ===== */
+.rail-wrap{position:relative;padding-left:34px}
+.rail-wrap::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:repeating-linear-gradient(to bottom,var(--indigo) 0 8px,transparent 8px 14px);opacity:.5}
+.stop{position:relative;padding-bottom:34px}
+.stop:last-child{padding-bottom:0}
+.stop::before{content:"";position:absolute;left:-32px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--indigo)}
+.stop.origin::before{background:var(--bronze);border-color:var(--bronze)}
+.stop.current::before{background:var(--indigo)}
+.stop .when{font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:var(--bronze);letter-spacing:.06em}
+.stop h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.08rem;margin:3px 0 2px}
+.stop .org{color:var(--ink-soft);font-size:.92rem;margin-bottom:8px}
+.stop ul{list-style:none}
+.stop li{position:relative;padding-left:18px;color:var(--ink-soft);font-size:.94rem;margin-bottom:5px}
+.stop li::before{content:"–";position:absolute;left:0;color:var(--bronze)}
+.geo-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--indigo);background:var(--tag-bg);border-radius:4px;padding:2px 8px;margin-left:8px;vertical-align:middle}
+
+/* ===== expandable project cards ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--rail);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .18s ease}
+.card:hover{box-shadow:0 12px 28px rgba(30,36,48,.08)}
+.card .ctx{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze)}
+.card h3{font-family:'Archivo',sans-serif;font-weight:750;font-size:1.12rem;line-height:1.3}
+.card .teaser{color:var(--ink-soft);font-size:.93rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:.7rem;background:var(--tag-bg);color:var(--indigo-deep);padding:3px 9px;border-radius:4px}
+.card-toggle{align-self:flex-start;background:none;border:none;font-family:'IBM Plex Mono',monospace;font-size:.8rem;font-weight:500;color:var(--indigo);cursor:pointer;padding:4px 0;display:inline-flex;align-items:center;gap:6px}
+.card-toggle:hover{color:var(--indigo-deep)}
+.card-toggle .chev{transition:transform .2s ease;display:inline-block}
+.card-toggle[aria-expanded="true"] .chev{transform:rotate(90deg)}
+.case{display:none;border-top:1px dashed var(--rail);padding-top:14px;margin-top:2px}
+.case.open{display:block}
+.case h4{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bronze);margin:12px 0 4px}
+.case h4:first-child{margin-top:0}
+.case p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ===== skills / education ===== */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:760px){.two-col{grid-template-columns:1fr}}
+.list-block h3{font-family:'Archivo',sans-serif;font-weight:750;font-size:1.05rem;margin-bottom:12px}
+.list-block + .list-block{margin-top:28px}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px}
+.pill{background:var(--card);border:1px solid var(--rail);border-radius:999px;padding:6px 14px;font-size:.85rem}
+.edu{border-left:3px solid var(--indigo);padding:2px 0 2px 16px;margin-bottom:20px}
+.edu .when{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--bronze)}
+.edu .deg{font-weight:600;margin-top:2px}
+.edu .inst{color:var(--ink-soft);font-size:.92rem}
+.lang-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--rail);padding:9px 2px;font-size:.93rem}
+.lang-row .lvl{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--ink-soft)}
+
+/* ===== contact ===== */
+.contact{background:var(--ink);color:#EFEAE0;border-radius:20px;max-width:var(--maxw);margin:24px auto 60px;padding:56px 40px}
+.contact .eyebrow{color:var(--bronze)}
+.contact h2{color:#fff;margin-bottom:14px}
+.contact p{max-width:580px;color:#C4BFB2;margin-bottom:28px}
+.contact a.btn-primary{background:#fff;color:var(--ink);border-color:#fff}
+.contact a.btn-primary:hover{background:var(--tag-bg)}
+.contact a.btn-ghost{color:#fff;border-color:#6A7185}
+.contact a.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.contact-meta{margin-top:34px;display:flex;gap:28px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:#9A94A6}
+footer{max-width:var(--maxw);margin:0 auto;padding:0 24px 40px;font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* ===== language switch ===== */
+.language-switch{display:flex;align-items:center;gap:5px;flex-shrink:0}
+.language-btn{font:500 .76rem 'IBM Plex Mono',monospace;border:1px solid var(--rail);background:transparent;color:var(--ink-soft);border-radius:999px;padding:7px 10px;cursor:pointer}
+.language-btn:hover{border-color:var(--indigo);color:var(--indigo)}
+.language-btn.active{background:var(--ink);border-color:var(--ink);color:#fff}
+@media(max-width:680px){.nav-inner{flex-wrap:wrap}.nav-links{display:none}.language-switch{margin-left:auto}}
+
+</style>
+</head>
+<body>
+
+<!-- ===== SECTION: NAV ===== -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top"><span class="dot"></span>ARS · PRODUCT × ENGINEERING</a>
+    <div class="nav-links">
+      <a href="#about" data-i18n="About">About</a>
+      <a href="#education" data-i18n="Academic Background">Academic Background</a>
+      <a href="#journey" data-i18n="Journey">Journey</a>
+      <a href="#projects" data-i18n="Projects">Projects</a>
+      <a href="#skills" data-i18n="Skills">Skills</a>
+      <a href="#contact" data-i18n="Contact">Contact</a>
+    </div>
+    <div class="language-switch" role="group" aria-label="Choose language">
+      <button type="button" class="language-btn active" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="language-btn" data-lang="de" aria-pressed="false">DE</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== SECTION: HERO ===== -->
+<header class="hero" id="top">
+  <p class="eyebrow">Jakarta → Lippstadt · Open to Werkstudent roles · Product · Project · Process</p>
+  <h1>Hi, I'm Arief.<br><span class="accent">Nice to meet you.</span></h1>
+  <p class="fullname mono">ARIEF RACHIM SAPUTRA · PRODUCT MANAGER &amp; INDUSTRIAL ENGINEER</p>
+  <p class="hero-sub">I'm a product manager who started out on the factory floor. Five years of building digital products across fintech, agritech and travel tech in Indonesia — and now I'm in Germany, adding an M.Sc. from Fachhochschule Südwestfalen to the mix.</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="Lebenslauf_Saputra.pdf" download>Download my CV</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/arief-rachim-saputra/" target="_blank" rel="noopener">Say hi on LinkedIn ↗</a>
+  </div>
+  <div class="fact-strip">
+    <div class="fact"><div class="k">Experience</div><div class="v">5+ years in product</div></div>
+    <div class="fact"><div class="k">Industries</div><div class="v">Fintech · Agritech · Travel</div></div>
+    <div class="fact"><div class="k">Currently</div><div class="v">Werkstudent @ Metcon GmbH</div></div>
+    <div class="fact"><div class="k">Based in</div><div class="v">Hamm, NRW, Germany</div></div>
+  </div>
+</header>
+
+<!-- ===== SECTION: ABOUT (narrative) ===== -->
+<section id="about">
+  <div class="section-head"><span class="idx mono">01</span><h2>A little about me</h2><span class="rule"></span></div>
+  <div class="about-grid">
+    <div class="about-prose">
+      <p>My story starts in <strong>Jakarta</strong>, with an industrial engineering degree from Swiss German University and a curiosity about how things get made. That curiosity took me to a paper mill, a Mercedes-Benz warehouse, a Master of Management at Universitas Indonesia — and eventually, somewhat unexpectedly, into software.</p>
+      <p>At <strong>Koltiva</strong>, I helped farmers' cocoa and coffee become traceable for buyers like Cargill, Mars and Nestlé. At <strong>Komunal</strong>, I worked on making loans reach small businesses faster. At <strong>Via Indonesia</strong>, I connected travel booking systems that millions of trips run on. Different industries, same job underneath: listen carefully, understand the process, and build something people actually use.</p>
+      <div class="pull">I think like an engineer and communicate like a PM — and I've learned that the best products come from doing both.</div>
+      <p>In 2015, I came to <strong>Soest in Germany</strong> for my first exchange semester. Ten years later, I came back — this time with my wife, a master's program, and a working-student role at Metcon in Lippstadt, the same company where I once interned. Life has a funny way of drawing circles.</p>
+      <p>Outside of work, I'm the guy who over-engineers birthday surprises and genuinely enjoys a well-structured spreadsheet. I believe good products, like good jokes, depend on timing and knowing your audience.</p>
+    </div>
+    <aside class="about-aside">
+      <img src="photo.jpg" alt="Portrait of Arief Rachim Saputra" class="portrait" onerror="this.style.display='none'">
+      <h3>The short version</h3>
+      <ul>
+        <li><span>Roots</span>Jakarta, Indonesia</li>
+        <li><span>Now</span>Hamm, NRW — studying in Soest, working in Lippstadt</li>
+        <li><span>Superpower</span>Translating between engineers, users and management</li>
+        <li><span>Looking for</span>Werkstudent role in product, project or process management</li>
+        <li><span>Ask me about</span>Traceability systems, GDS integrations, lean manufacturing — or Indonesian food</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== SECTION: ACADEMIC BACKGROUND ===== -->
+<section id="education">
+  <div class="section-head"><span class="idx mono">02</span><h2>Academic Background</h2><span class="rule"></span></div>
+  <div class="two-col">
+    <div>
+
+        <div class="edu">
+          <div class="when">10.2025 — PRESENT</div>
+          <div class="deg">M.Sc. Advanced Engineering &amp; Engineering Management</div>
+          <div class="inst">Fachhochschule Südwestfalen, Soest, Germany · Focus: project management, lean manufacturing, change management, digitalisation</div>
+        </div>
+        <div class="edu">
+          <div class="when">2019 — 2020</div>
+          <div class="deg">Master of Management</div>
+          <div class="inst">Universitas Indonesia · Final grade: 3.26/4.00 (approx. 2.1 German scale) · Thesis: The Effect of Digital Advertising on Purchase Intention</div>
+        </div>
+        <div class="edu">
+          <div class="when">2012 — 2016</div>
+          <div class="deg">B.Eng. Industrial Engineering</div>
+          <div class="inst">Swiss German University, Indonesia · Final grade: 3.16/4.00 (approx. 2.3 German scale) · incl. double-degree exchange semester at FH Südwestfalen (2015) · Thesis: Analysis of Factory Warehouse Design at Mercedes-Benz Indonesia</div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION: JOURNEY (career rail)
+     To add a new role: copy one <div class="stop">...</div> block.
+     Use class "stop current" for your newest role. ===== -->
+<section id="journey">
+  <div class="section-head"><span class="idx mono">03</span><h2>The route so far</h2><span class="rule"></span></div>
+  <div class="rail-wrap">
+
+    <div class="stop current">
+      <span class="when">10.2025 — PRESENT</span>
+      <h3>Working Student <span class="geo-tag">Lippstadt, DE</span></h3>
+      <p class="org">Metcon GmbH &amp; Co. KG · Manufacturing</p>
+      <ul>
+        <li>Production and engineering support alongside my master's studies</li>
+        <li>Day-to-day operations, quality checks, process documentation</li>
+      </ul>
+    </div>
+
+    <div class="stop">
+      <span class="when">10.2024 — 06.2025</span>
+      <h3>Freelance Product Manager <span class="geo-tag">Remote</span></h3>
+      <p class="org">Independent client projects</p>
+      <ul>
+        <li>PRDs, user stories, flowcharts and wireframes for client products</li>
+        <li>Aligned clients and developers on scope and priorities</li>
+      </ul>
+    </div>
+
+    <div class="stop">
+      <span class="when">11.2023 — 10.2024</span>
+      <h3>Product Manager <span class="geo-tag">Indonesia</span></h3>
+      <p class="org">PT Adya Tours — Via Indonesia · Travel Technology</p>
+      <ul>
+        <li>Fixed the platform's top two issues: slow flight search and hardcoded fare benefits (complaints down ~60%)</li>
+        <li>Upgraded airline &amp; hotel booking integrations incl. GDS (Sabre, Galileo Travelport)</li>
+        <li>Owned the annual roadmap; PRDs/BRDs and priorities across design, engineering, legal and compliance</li>
+      </ul>
+    </div>
+
+    <div class="stop">
+      <span class="when">02.2023 — 11.2023</span>
+      <h3>Product Manager <span class="geo-tag">Indonesia</span></h3>
+      <p class="org">PT Komunal Finansial Indonesia · Fintech</p>
+      <ul>
+        <li>Automated the manual loan pipeline: submissions land as analyst to-dos with live progress status</li>
+        <li>Built a document-flow mechanism so every submission is stored neatly end to end</li>
+        <li>Created an open API for external lenders to run their own loan products on the platform</li>
+      </ul>
+    </div>
+
+    <div class="stop">
+      <span class="when">04.2021 — 02.2023</span>
+      <h3>Product Operations Officer → Lead → Manager <span class="geo-tag">Indonesia</span></h3>
+      <p class="org">PT Koltiva · Agriculture Technology (B2B)</p>
+      <ul>
+        <li>Promoted twice on traceability software for palm oil, seaweed, rubber, coconut and cocoa</li>
+        <li>GSMA project: digitalised rural farmer &amp; trader payments — farmer base tripled, 80% transacting digitally</li>
+        <li>Drove the Nestlé Global track-and-trace app from initiation to prototype and a won tender</li>
+      </ul>
+    </div>
+
+    <div class="stop">
+      <span class="when">06.2017 — 02.2018</span>
+      <h3>Project Engineer <span class="geo-tag">Indonesia</span></h3>
+      <p class="org">Voith Paper Rolls Indonesia · Manufacturing</p>
+      <ul>
+        <li>Coordinated overseas projects across HQ, sales, production and logistics</li>
+        <li>Production schedules, quality checks, deliveries, import/export documents</li>
+      </ul>
+    </div>
+
+    <div class="stop origin">
+      <span class="when">2015 — 2016 · WHERE IT STARTED</span>
+      <h3>Engineering Internships <span class="geo-tag">DE + ID</span></h3>
+      <p class="org">Metcon GmbH (Lippstadt, exchange semester) · Mercedes-Benz Indonesia</p>
+      <ul>
+        <li>Production scheduling, material monitoring and quality checks at Metcon</li>
+        <li>Traced mid-assembly part shortages at Mercedes-Benz to undispatched warehouse stock — and redesigned the layout</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION: PROJECTS (expandable case studies)
+     To add a project: copy a whole <article class="card">...</article>.
+     Keep the button's aria-controls and the .case id matching (e.g. case-5). ===== -->
+<section id="projects">
+  <div class="section-head"><span class="idx mono">04</span><h2>Selected work</h2><span class="rule"></span></div>
+  <div class="grid">
+
+    <article class="card">
+      <span class="ctx">Travel Tech · Via Indonesia</span>
+      <h3>Fixing what travelers see — and how fast they see it</h3>
+      <p class="teaser">Search was slow, and the system promised luggage that wasn't in the ticket. I fixed the top two issues and upgraded the GDS integrations behind them.</p>
+      <div class="tags"><span class="tag">GDS integration</span><span class="tag">Search performance</span><span class="tag">Data accuracy</span></div>
+      <button class="card-toggle" aria-expanded="false" aria-controls="case-1"><span class="chev">▸</span> Read the full story</button>
+      <div class="case" id="case-1">
+        <h4>The challenge</h4>
+        <p>When I joined, the platform's number one and number two issues were clear: flight search took far too long, and ticket benefits displayed incorrectly. A fare without checked luggage could show "23 kg included" — because benefits had been hardcoded into the system years earlier instead of being read from the airlines and GDS. For a travel product, showing a customer luggage they don't actually have isn't a cosmetic bug; it's a trust and complaints problem.</p>
+        <h4>What I did</h4>
+        <p>I tackled both from the integration layer. We upgraded the connections to the GDS systems (Sabre, Galileo Travelport) and reworked benefit display to come from live API returns instead of hardcoded values — so what the airline says is what the traveler sees. Alongside the search-time and accuracy fixes, I owned the annual roadmap with management, wrote the PRDs and BRDs, coordinated design, engineering, legal and compliance, and tested features myself before every release.</p>
+        <h4>What came out of it</h4>
+        <p>Faster search, accurate fare benefits straight from the source, and booking integrations the business could rely on. After the fix went live, complaints about incorrect benefits dropped by around 60%.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="ctx">Fintech · Komunal</span>
+      <h3>Automating the loan pipeline</h3>
+      <p class="teaser">Credit scoring was solid — but manual. I turned it into an automated workflow and opened it up to outside lenders via API.</p>
+      <div class="tags"><span class="tag">Workflow automation</span><span class="tag">Open API</span><span class="tag">B2B2C</span></div>
+      <button class="card-toggle" aria-expanded="false" aria-controls="case-2"><span class="chev">▸</span> Read the full story</button>
+      <div class="case" id="case-2">
+        <h4>The challenge</h4>
+        <p>Komunal's credit scoring was already good — the bottleneck was that the process around it ran manually. Loan requests from SME owners had to be picked up, tracked and moved through analysis by hand, which capped how fast (and how many) loans could flow through.</p>
+        <h4>What I did</h4>
+        <p>I designed the automated flow: the moment an SME owner submits a loan request, it lands in the credit analysts' system as a to-do, and every progress change updates automatically — so analysts spend their time analysing, not administrating, and borrowers wait less. I also built a flow mechanism that stores every submitted document neatly along the way, so nothing gets lost between submission and decision. On top of that, I worked on an open API so interested lenders and financing partners could plug in and run their own loan products through the platform.</p>
+        <h4>What came out of it</h4>
+        <p>Shorter waiting times for borrowers, a tidier document trail for analysts, a platform other lenders could build on — and a contribution to growth in monthly loan disbursement.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="ctx">Agritech · Koltiva</span>
+      <h3>Traceability from farm gate to global brand</h3>
+      <p class="teaser">Palm oil, seaweed, rubber, coconut, cocoa — I made sure the apps worked where it mattered most: in the field.</p>
+      <div class="tags"><span class="tag">B2B SaaS</span><span class="tag">Field ops</span><span class="tag">Digital payments</span></div>
+      <button class="card-toggle" aria-expanded="false" aria-controls="case-3"><span class="chev">▸</span> Read the full story</button>
+      <div class="case" id="case-3">
+        <h4>The challenge</h4>
+        <p>Koltiva's platforms trace commodities — palm oil, seaweed, rubber, coconut, cocoa — from smallholder farms into global supply chains. But software that works in a demo doesn't automatically work on a farm with patchy signal and users who've never used an app like it. My job was making sure it actually ran well in the field.</p>
+        <h4>What I did</h4>
+        <p>I didn't manage this from a desk — I went to the field myself. On our GSMA project, we digitalised payments for farmers and commodity traders in rural Indonesia: farmers could buy products through the platform and transact their harvest to traders directly in the app — which also helped them obtain a fairer price for their results. Separately, I worked on the Nestlé Global application — a track-and-trace platform for sources of dairy, coffee and cocoa, planned to roll out to Nestlé companies worldwide. I drove the initiation phase through to the working prototype and winning the tender, before handing it over to a colleague for delivery.</p>
+        <h4>What came out of it</h4>
+        <p>The farmer base tripled during the project, and 80% of farmers went on to transact digitally — rural farmers and traders trading at fairer prices, a won global tender for one of the world's largest food companies, and two promotions in two years, from Officer to Lead to Manager.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <span class="ctx">Automotive · Mercedes-Benz Indonesia</span>
+      <h3>Solving the case of the missing parts</h3>
+      <p class="teaser">Assemblies were stalling halfway because parts never arrived. I traced the problem back to the warehouse — and redesigned it.</p>
+      <div class="tags"><span class="tag">Lean</span><span class="tag">Layout planning</span><span class="tag">Logistics</span></div>
+      <button class="card-toggle" aria-expanded="false" aria-controls="case-4"><span class="chev">▸</span> Read the full story</button>
+      <div class="case" id="case-4">
+        <h4>The challenge</h4>
+        <p>Assemblies kept stalling mid-build. An operator would be 45% — sometimes 80% — through an assembly before discovering a required part simply wasn't there. Each discovery meant a stopped line, a search, and a production delay.</p>
+        <h4>What I did</h4>
+        <p>Instead of treating it as an assembly problem, I traced it upstream. The investigation showed the missing parts had never been sent from the warehouse in the first place. So I analysed the warehouse's storage and picking flows and redesigned the layout to improve capacity and accessibility — making parts easier to locate, pick and dispatch completely before assembly ever starts. The work became my bachelor's thesis.</p>
+        <h4>What came out of it</h4>
+        <p>Fewer mid-assembly surprises and a warehouse organised around how parts actually flow to the line — plus my first real lesson in root-cause thinking: the problem you see is rarely where the problem lives.</p>
+      </div>
+    </article>
+
+    <!-- TEMPLATE — copy this to add a new project, change id to case-5, case-6, ...
+    <article class="card">
+      <span class="ctx">Industry · Company</span>
+      <h3>Project title</h3>
+      <p class="teaser">One friendly sentence about it.</p>
+      <div class="tags"><span class="tag">Tag</span></div>
+      <button class="card-toggle" aria-expanded="false" aria-controls="case-5"><span class="chev">▸</span> Read the full story</button>
+      <div class="case" id="case-5">
+        <h4>The challenge</h4><p>...</p>
+        <h4>What I did</h4><p>...</p>
+        <h4>What came out of it</h4><p>...</p>
+      </div>
+    </article>
+    -->
+
+  </div>
+</section>
+
+<!-- ===== SECTION: SKILLS ===== -->
+<section id="skills">
+  <div class="section-head"><span class="idx mono">05</span><h2>Toolkit</h2><span class="rule"></span></div>
+  <div class="two-col">
+    <div>
+      <div class="list-block">
+        <h3>Product</h3>
+        <div class="pill-row">
+          <span class="pill">Roadmapping</span><span class="pill">PRD / BRD</span><span class="pill">User stories</span>
+          <span class="pill">Backlog management</span><span class="pill">UAT</span><span class="pill">Wireframing</span>
+          <span class="pill">Stakeholder alignment</span>
+        </div>
+      </div>
+      <div class="list-block">
+        <h3>Engineering &amp; operations</h3>
+        <div class="pill-row">
+          <span class="pill">Production planning</span><span class="pill">Quality checks</span>
+          <span class="pill">Process documentation</span><span class="pill">Warehouse &amp; layout planning</span>
+          <span class="pill">Import/export coordination</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="list-block">
+        <h3>Languages</h3>
+        <div class="lang-row"><span>Indonesian</span><span class="lvl">NATIVE</span></div>
+        <div class="lang-row"><span>English</span><span class="lvl">C1 · PROFESSIONAL</span></div>
+        <div class="lang-row"><span>German</span><span class="lvl">B1 · INTERMEDIATE</span></div>
+      </div>
+      <div class="list-block">
+        <h3>Certifications</h3>
+        <div class="lang-row"><span>Product Management · Binar Academy</span><span class="lvl">2022 — 2023</span></div>
+        <div class="lang-row"><span>Digital Marketing · RevoU</span><span class="lvl">2021 — 2022</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION: CONTACT ===== -->
+<div class="contact" id="contact">
+  <p class="eyebrow">Next stop</p>
+  <h2>Let's build something together</h2>
+  <p>I'm looking for a Werkstudent position in product, project or process management — anywhere the factory floor meets the roadmap. If that sounds like your team, I'd genuinely love to hear from you. Coffee's on me (Indonesian beans, naturally).</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="mailto:ariefrachim@hotmail.com">Email me</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/arief-rachim-saputra/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+  <div class="contact-meta">
+    <span>ariefrachim@hotmail.com</span>
+    <span>+49 177 5935376</span>
+    <span>Hamm, NRW · Germany</span>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 Arief Rachim Saputra</span>
+  <span>Jakarta → Lippstadt, one sprint at a time</span>
+</footer>
+
+<script>
+// Expand/collapse case studies — accessible, no libraries needed.
+document.querySelectorAll('.card-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var panel = document.getElementById(btn.getAttribute('aria-controls'));
+    var open = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    btn.querySelector('.chev').textContent = '▸';
+    const german = document.documentElement.lang === 'de';
+    btn.childNodes[1].textContent = open ? (german ? ' Geschichte schließen' : ' Close the story') : (german ? ' Ganze Geschichte lesen' : ' Read the full story');
+  });
+});
+</script>
+
+
+<script>
+(function(){
+  const translations = {"About": "Über mich", "Journey": "Werdegang", "Projects": "Projekte", "Skills": "Kompetenzen", "Contact": "Kontakt", "Jakarta → Lippstadt · Open to Werkstudent roles · Product · Project · Process": "Jakarta → Lippstadt · Offen für Werkstudentenstellen · Produkt · Projekt · Prozess", "Hi, I'm Arief.": "Hallo, ich bin Arief.", "Nice to meet you.": "Schön, dich kennenzulernen.", "I'm a product manager who started out on the factory floor. Five years of building digital products across fintech, agritech and travel tech in Indonesia — and now I'm in Germany, adding an M.Sc. from Fachhochschule Südwestfalen to the mix.": "Ich bin Produktmanager und habe meine berufliche Laufbahn in der Produktion begonnen. In Indonesien habe ich fünf Jahre lang digitale Produkte in den Bereichen Fintech, Agrartechnologie und Travel Tech entwickelt. Jetzt lebe ich in Deutschland und studiere Advanced Engineering and Engineering Management an der Fachhochschule Südwestfalen.", "Download my CV": "Lebenslauf herunterladen", "Say hi on LinkedIn ↗": "Auf LinkedIn Hallo sagen ↗", "Experience": "Berufserfahrung", "5+ years in product": "Über 5 Jahre im Produktmanagement", "Industries": "Branchen", "Fintech · Agritech · Travel": "Fintech · Agrartechnologie · Reisen", "Currently": "Aktuell", "Based in": "Wohnort", "A little about me": "Ein bisschen über mich", "My story starts in": "Meine Geschichte beginnt in", "with an industrial engineering degree from Swiss German University and a curiosity about how things get made. That curiosity took me to a paper mill, a Mercedes-Benz warehouse, a Master of Management at Universitas Indonesia — and eventually, somewhat unexpectedly, into software.": "mit einem Abschluss in Wirtschaftsingenieurwesen an der Swiss German University und meiner Neugier darauf, wie Dinge hergestellt werden. Diese Neugier führte mich in eine Papierfabrik, in ein Mercedes-Benz-Lager, zum Master of Management an der Universitas Indonesia und schließlich – etwas unerwartet – in die Softwarebranche.", "At": "Bei", "I helped farmers' cocoa and coffee become traceable for buyers like Cargill, Mars and Nestlé. At": "habe ich dazu beigetragen, Kakao und Kaffee von Landwirten für Abnehmer wie Cargill, Mars und Nestlé rückverfolgbar zu machen. Bei", ", I worked on making loans reach small businesses faster. At": ", arbeitete ich daran, kleinen Unternehmen schneller Kredite zugänglich zu machen. Bei", ", I connected travel booking systems that millions of trips run on. Different industries, same job underneath: listen carefully, understand the process, and build something people actually use.": ", verband ich Buchungssysteme, über die Millionen Reisen abgewickelt werden. Unterschiedliche Branchen, aber dieselbe Aufgabe: genau zuhören, Prozesse verstehen und Lösungen entwickeln, die Menschen wirklich nutzen.", "I think like an engineer and communicate like a PM — and I've learned that the best products come from doing both.": "Ich denke wie ein Ingenieur und kommuniziere wie ein Produktmanager. Ich habe gelernt, dass die besten Produkte entstehen, wenn man beides verbindet.", "In 2015, I came to": "2015 bin ich zum ersten Mal für ein Auslandssemester nach", "for my first exchange semester. Ten years later, I came back — this time with my wife, a master's program, and a working-student role at Metcon in Lippstadt, the same company where I once interned. Life has a funny way of drawing circles.": "gekommen. Zehn Jahre später bin ich zurückgekommen – diesmal mit meiner Frau, einem Masterstudium und einer Werkstudentenstelle bei Metcon in Lippstadt, demselben Unternehmen, bei dem ich früher ein Praktikum gemacht habe. Manchmal schließt sich der Kreis auf unerwartete Weise.", "Outside of work, I'm the guy who over-engineers birthday surprises and genuinely enjoys a well-structured spreadsheet. I believe good products, like good jokes, depend on timing and knowing your audience.": "Außerhalb der Arbeit plane ich Geburtstagsüberraschungen manchmal viel zu detailliert und freue mich ehrlich gesagt über eine gut strukturierte Excel-Tabelle. Ich glaube, gute Produkte sind wie gute Witze: Das richtige Timing und das Verständnis für die Zielgruppe sind entscheidend.", "The short version": "Kurz zusammengefasst", "Roots": "Herkunft", "Jakarta, Indonesia": "Jakarta, Indonesien", "Now": "Heute", "Hamm, NRW — studying in Soest, working in Lippstadt": "Hamm, NRW – Studium in Soest, Arbeit in Lippstadt", "Superpower": "Stärke", "Translating between engineers, users and management": "Vermittlung zwischen Ingenieuren, Nutzern und Management", "Looking for": "Auf der Suche nach", "Werkstudent role in product, project or process management": "Werkstudentenstelle im Produkt-, Projekt- oder Prozessmanagement", "Ask me about": "Frag mich nach", "Traceability systems, GDS integrations, lean manufacturing — or Indonesian food": "Rückverfolgbarkeitssysteme, GDS-Integrationen, Lean Manufacturing oder indonesischem Essen", "The route so far": "Mein bisheriger Weg", "Working Student": "Werkstudent", "Production and engineering support alongside my master's studies": "Unterstützung in Produktion und Engineering parallel zu meinem Masterstudium", "Day-to-day operations, quality checks, process documentation": "Tägliche Abläufe, Qualitätskontrollen und Prozessdokumentation", "Freelance Product Manager": "Freiberuflicher Produktmanager", "Independent client projects": "Unabhängige Kundenprojekte", "PRDs, user stories, flowcharts and wireframes for client products": "PRDs, User Stories, Flussdiagramme und Wireframes für Kundenprodukte", "Aligned clients and developers on scope and priorities": "Abstimmung von Umfang und Prioritäten mit Kunden und Entwicklern", "Product Manager": "Produktmanager", "Fixed the platform's top two issues: slow flight search and hardcoded fare benefits (complaints down ~60%)": "Behebung der zwei größten Plattformprobleme: langsame Flugsuche und fest hinterlegte Tarifleistungen (Beschwerden um ca. 60 % gesunken)", "Upgraded airline & hotel booking integrations incl. GDS (Sabre, Galileo Travelport)": "Verbesserung der Flug- und Hotelbuchungsintegrationen einschließlich GDS (Sabre, Galileo Travelport)", "Owned the annual roadmap; PRDs/BRDs and priorities across design, engineering, legal and compliance": "Verantwortung für die Jahres-Roadmap, PRDs/BRDs und Prioritäten in Design, Engineering, Recht und Compliance", "Automated the manual loan pipeline: submissions land as analyst to-dos with live progress status": "Automatisierung des manuellen Kreditprozesses: Anträge werden als Aufgaben für Analysten mit aktuellem Bearbeitungsstatus erfasst", "Built a document-flow mechanism so every submission is stored neatly end to end": "Entwicklung eines Dokumentenprozesses zur vollständigen und strukturierten Ablage aller Anträge", "Created an open API for external lenders to run their own loan products on the platform": "Entwicklung einer Open API, über die externe Kreditgeber eigene Kreditprodukte auf der Plattform anbieten können", "Product Operations Officer → Lead → Manager": "Product Operations Officer → Lead → Manager", "Promoted twice on traceability software for palm oil, seaweed, rubber, coconut and cocoa": "Zweimal befördert im Bereich Rückverfolgbarkeitssoftware für Palmöl, Algen, Kautschuk, Kokosnuss und Kakao", "GSMA project: digitalised rural farmer & trader payments — farmer base tripled, 80% transacting digitally": "GSMA-Projekt: Digitalisierung von Zahlungen für Landwirte und Händler in ländlichen Gebieten – Zahl der Landwirte verdreifacht, 80 % nutzten digitale Transaktionen", "Drove the Nestlé Global track-and-trace app from initiation to prototype and a won tender": "Leitung der Nestlé-Global-Track-and-Trace-App von der Initiierung bis zum Prototyp und erfolgreichen Ausschreibungsgewinn", "Project Engineer": "Projektingenieur", "Coordinated overseas projects across HQ, sales, production and logistics": "Koordination internationaler Projekte zwischen Hauptsitz, Vertrieb, Produktion und Logistik", "Production schedules, quality checks, deliveries, import/export documents": "Produktionsplanung, Qualitätskontrollen, Lieferungen sowie Import- und Exportdokumente", "2015 — 2016 · WHERE IT STARTED": "2015–2016 · DER ANFANG", "Engineering Internships": "Praktika im Ingenieurwesen", "Production scheduling, material monitoring and quality checks at Metcon": "Produktionsplanung, Materialüberwachung und Qualitätskontrollen bei Metcon", "Traced mid-assembly part shortages at Mercedes-Benz to undispatched warehouse stock — and redesigned the layout": "Rückführung fehlender Teile während der Montage bei Mercedes-Benz auf nicht versendete Lagerbestände – anschließend Neugestaltung des Lagerlayouts", "Selected work": "Ausgewählte Projekte", "Fixing what travelers see — and how fast they see it": "Verbesserung der angezeigten Reiseinformationen und der Geschwindigkeit", "Search was slow, and the system promised luggage that wasn't in the ticket. I fixed the top two issues and upgraded the GDS integrations behind them.": "Die Suche war langsam und das System zeigte Gepäck an, das im Ticket nicht enthalten war. Ich behob die beiden größten Probleme und verbesserte die dahinterliegenden GDS-Integrationen.", "Read the full story": "Die ganze Geschichte lesen", "Close the story": "Projekt schließen", "The challenge": "Die Herausforderung", "What I did": "Mein Beitrag", "What came out of it": "Das Ergebnis", "When I joined, the platform's number one and number two issues were clear: flight search took far too long, and ticket benefits displayed incorrectly. A fare without checked luggage could show \"23 kg included\" — because benefits had been hardcoded into the system years earlier instead of being read from the airlines and GDS. For a travel product, showing a customer luggage they don't actually have isn't a cosmetic bug; it's a trust and complaints problem.": "Als ich anfing, waren die zwei größten Probleme der Plattform klar: Die Flugsuche dauerte zu lange und die Tarifleistungen wurden falsch angezeigt. Ein Tarif ohne Aufgabegepäck konnte beispielsweise „23 kg inklusive“ anzeigen. Der Grund war, dass die Leistungen vor Jahren fest im System hinterlegt worden waren, statt sie direkt von den Fluggesellschaften und dem GDS abzurufen. Bei einem Reiseprodukt ist das kein rein optischer Fehler, sondern ein Problem für Vertrauen und Kundenzufriedenheit.", "I tackled both from the integration layer. We upgraded the connections to the GDS systems (Sabre, Galileo Travelport) and reworked benefit display to come from live API returns instead of hardcoded values — so what the airline says is what the traveler sees. Alongside the search-time and accuracy fixes, I owned the annual roadmap with management, wrote the PRDs and BRDs, coordinated design, engineering, legal and compliance, and tested features myself before every release.": "Ich ging beide Probleme auf der Integrationsebene an. Wir verbesserten die Verbindungen zu den GDS-Systemen (Sabre, Galileo Travelport) und änderten die Anzeige der Tarifleistungen so, dass sie aus aktuellen API-Antworten statt aus fest hinterlegten Werten stammten. So sehen Reisende genau die Informationen, die von der Fluggesellschaft bereitgestellt werden. Neben den Verbesserungen bei Suchzeit und Datenqualität verantwortete ich gemeinsam mit dem Management die Jahres-Roadmap, erstellte PRDs und BRDs, koordinierte Design, Engineering, Recht und Compliance und testete Funktionen vor jeder Veröffentlichung selbst.", "Faster search, accurate fare benefits straight from the source, and booking integrations the business could rely on. After the fix went live, complaints about incorrect benefits dropped by around 60%.": "Das Ergebnis waren eine schnellere Suche, korrekte Tarifleistungen direkt aus der Quelle und zuverlässige Buchungsintegrationen. Nach der Einführung der Änderungen gingen Beschwerden über falsche Tarifleistungen um etwa 60 % zurück.", "Automating the loan pipeline": "Automatisierung des Kreditprozesses", "Credit scoring was solid — but manual. I turned it into an automated workflow and opened it up to outside lenders via API.": "Das Scoring funktionierte gut, aber die Abläufe waren manuell. Ich entwickelte einen automatisierten Workflow und ermöglichte externen Kreditgebern den Zugriff über eine API.", "Komunal's credit scoring was already good — the bottleneck was that the process around it ran manually. Loan requests from SME owners had to be picked up, tracked and moved through analysis by hand, which capped how fast (and how many) loans could flow through.": "Das Kredit-Scoring von Komunal funktionierte bereits gut. Der Engpass lag im manuellen Prozess: Kreditanträge von kleinen und mittleren Unternehmen mussten manuell aufgenommen, verfolgt und analysiert werden. Dadurch waren Geschwindigkeit und Anzahl der bearbeiteten Kredite begrenzt.", "I designed the automated flow: the moment an SME owner submits a loan request, it lands in the credit analysts' system as a to-do, and every progress change updates automatically — so analysts spend their time analysing, not administrating, and borrowers wait less. I also built a flow mechanism that stores every submitted document neatly along the way, so nothing gets lost between submission and decision. On top of that, I worked on an open API so interested lenders and financing partners could plug in and run their own loan products through the platform.": "Ich konzipierte den automatisierten Ablauf: Sobald ein Unternehmen einen Kreditantrag einreicht, erscheint dieser als Aufgabe im System der Kreditanalysten. Jede Statusänderung wird automatisch aktualisiert. So können sich die Analysten auf die Analyse statt auf administrative Aufgaben konzentrieren und Antragsteller müssen weniger warten. Außerdem entwickelte ich einen Prozess, der alle eingereichten Dokumente strukturiert speichert, sodass zwischen Antrag und Entscheidung nichts verloren geht. Zusätzlich arbeitete ich an einer Open API, über die Kreditgeber und Finanzierungspartner ihre eigenen Kreditprodukte in die Plattform integrieren können.", "Shorter waiting times for borrowers, a tidier document trail for analysts, a platform other lenders could build on — and a contribution to growth in monthly loan disbursement.": "Kürzere Wartezeiten für Kreditnehmer, eine übersichtlichere Dokumentation für Analysten und eine Plattform, auf der andere Kreditgeber aufbauen können – außerdem ein Beitrag zum Wachstum der monatlichen Kreditauszahlungen.", "Traceability from farm gate to global brand": "Rückverfolgbarkeit vom Bauernhof bis zur globalen Marke", "Palm oil, seaweed, rubber, coconut, cocoa — I made sure the apps worked where it mattered most: in the field.": "Palmöl, Algen, Kautschuk, Kokosnuss und Kakao – ich stellte sicher, dass die Apps dort funktionierten, wo es am wichtigsten war: direkt vor Ort.", "Koltiva's platforms trace commodities — palm oil, seaweed, rubber, coconut, cocoa — from smallholder farms into global supply chains. But software that works in a demo doesn't automatically work on a farm with patchy signal and users who've never used an app like it. My job was making sure it actually ran well in the field.": "Die Plattformen von Koltiva verfolgen Rohstoffe wie Palmöl, Algen, Kautschuk, Kokosnuss und Kakao von Kleinbauern bis in globale Lieferketten. Software, die in einer Demo funktioniert, läuft jedoch nicht automatisch auf einem Bauernhof mit schwachem Mobilfunkempfang und Nutzern, die bisher kaum Apps verwendet haben. Meine Aufgabe war es, den zuverlässigen Einsatz vor Ort sicherzustellen.", "I didn't manage this from a desk — I went to the field myself. On our GSMA project, we digitalised payments for farmers and commodity traders in rural Indonesia: farmers could buy products through the platform and transact their harvest to traders directly in the app — which also helped them obtain a fairer price for their results. Separately, I worked on the Nestlé Global application — a track-and-trace platform for sources of dairy, coffee and cocoa, planned to roll out to Nestlé companies worldwide. I drove the initiation phase through to the working prototype and winning the tender, before handing it over to a colleague for delivery.": "Ich betreute dieses Projekt nicht nur vom Schreibtisch aus, sondern war selbst vor Ort. Im GSMA-Projekt digitalisierten wir Zahlungen für Landwirte und Rohstoffhändler im ländlichen Indonesien. Landwirte konnten Produkte über die Plattform kaufen und ihre Ernte direkt in der App an Händler verkaufen. Das half ihnen auch, fairere Preise zu erzielen. Außerdem arbeitete ich an der Nestlé-Global-Anwendung – einer Track-and-Trace-Plattform für Milchprodukte, Kaffee und Kakao, die weltweit bei Nestlé-Unternehmen eingeführt werden sollte. Ich leitete die Initiierungsphase bis zum funktionsfähigen Prototyp und erfolgreichen Ausschreibungsgewinn, bevor ich das Projekt zur Umsetzung an einen Kollegen übergab.", "The farmer base tripled during the project, and 80% of farmers went on to transact digitally — rural farmers and traders trading at fairer prices, a won global tender for one of the world's largest food companies, and two promotions in two years, from Officer to Lead to Manager.": "Während des Projekts verdreifachte sich die Zahl der Landwirte, und 80 % wickelten anschließend Transaktionen digital ab. Das Projekt ermöglichte fairere Preise für Landwirte und Händler im ländlichen Raum. Hinzu kamen der Gewinn einer globalen Ausschreibung für einen der größten Lebensmittelkonzerne der Welt und zwei Beförderungen innerhalb von zwei Jahren – vom Officer über den Lead bis zum Manager.", "Solving the case of the missing parts": "Der Fall der fehlenden Bauteile", "Assemblies were stalling halfway because parts never arrived. I traced the problem back to the warehouse — and redesigned it.": "Montagearbeiten kamen zum Stillstand, weil Bauteile nicht rechtzeitig ankamen. Ich verfolgte die Ursache bis zum Lager zurück und gestaltete es neu.", "Assemblies kept stalling mid-build. An operator would be 45% — sometimes 80% — through an assembly before discovering a required part simply wasn't there. Each discovery meant a stopped line, a search, and a production delay.": "Die Montage kam immer wieder mitten im Prozess zum Stillstand. Ein Mitarbeiter hatte manchmal bereits 45 % oder sogar 80 % der Arbeit erledigt, bevor er feststellte, dass ein benötigtes Teil fehlte. Jedes Mal bedeutete das einen Produktionsstopp, eine Suche und eine Verzögerung.", "Instead of treating it as an assembly problem, I traced it upstream. The investigation showed the missing parts had never been sent from the warehouse in the first place. So I analysed the warehouse's storage and picking flows and redesigned the layout to improve capacity and accessibility — making parts easier to locate, pick and dispatch completely before assembly ever starts. The work became my bachelor's thesis.": "Anstatt das Problem als Montageproblem zu behandeln, suchte ich nach der Ursache in den vorgelagerten Prozessen. Die Untersuchung zeigte, dass die fehlenden Teile das Lager nie verlassen hatten. Deshalb analysierte ich die Lager- und Kommissionierprozesse und gestaltete das Layout neu, um Kapazität und Zugänglichkeit zu verbessern. Dadurch konnten Teile leichter gefunden, kommissioniert und vollständig versendet werden, bevor die Montage begann. Diese Arbeit wurde zu meiner Bachelorarbeit.", "Fewer mid-assembly surprises and a warehouse organised around how parts actually flow to the line — plus my first real lesson in root-cause thinking: the problem you see is rarely where the problem lives.": "Weniger unerwartete Unterbrechungen während der Montage und ein Lager, das sich am tatsächlichen Materialfluss zur Produktionslinie orientiert. Außerdem lernte ich eine wichtige Lektion zur Ursachenanalyse: Das sichtbare Problem liegt selten dort, wo seine eigentliche Ursache zu finden ist.", "Toolkit": "Kompetenzen", "Engineering & operations": "Engineering & Betrieb", "Academic Background": "Akademischer Werdegang", "Education": "Akademischer Werdegang", "Focus: project management, lean manufacturing, change management, digitalisation": "Schwerpunkte: Projektmanagement, Lean Manufacturing, Change Management und Digitalisierung", "Final grade: 3.26/4.00 (approx. 2.1 German scale) · Thesis: The Effect of Digital Advertising on Purchase Intention": "Abschlussnote: 3,26/4,00 (entspricht ungefähr 2,1 im deutschen Notensystem) · Abschlussarbeit: Der Einfluss digitaler Werbung auf die Kaufabsicht", "Final grade: 3.16/4.00 (approx. 2.3 German scale) · incl. double-degree exchange semester at FH Südwestfalen (2015) · Thesis: Analysis of Factory Warehouse Design at Mercedes-Benz Indonesia": "Abschlussnote: 3,16/4,00 (entspricht ungefähr 2,3 im deutschen Notensystem) · einschließlich Double-Degree-Austauschsemester an der FH Südwestfalen (2015) · Abschlussarbeit: Analyse der Lagergestaltung bei Mercedes-Benz Indonesia", "Product": "Produktmanagement", "Roadmapping": "Roadmap-Planung", "User stories": "User Stories", "Backlog management": "Backlog-Management", "Stakeholder alignment": "Abstimmung mit Stakeholdern", "Production planning": "Produktionsplanung", "Quality checks": "Qualitätskontrollen", "Process documentation": "Prozessdokumentation", "Warehouse & layout planning": "Lager- und Layoutplanung", "Import/export coordination": "Import-/Exportkoordination", "Languages": "Sprachen", "NATIVE": "MUTTERSPRACHE", "C1 · PROFESSIONAL": "C1 · BERUFLICH", "B1 · INTERMEDIATE": "B1 · MITTELSTUFE", "Certifications": "Zertifikate", "Next stop": "Nächster Schritt", "Let's build something together": "Lass uns gemeinsam etwas aufbauen", "I'm looking for a Werkstudent position in product, project or process management — anywhere the factory floor meets the roadmap. If that sounds like your team, I'd genuinely love to hear from you. Coffee's on me (Indonesian beans, naturally).": "Ich suche eine Werkstudentenstelle im Produkt-, Projekt- oder Prozessmanagement – überall dort, wo Produktion und strategische Planung zusammenkommen. Wenn das zu deinem Team passt, freue ich mich sehr, von dir zu hören. Den Kaffee spendiere ich (natürlich mit indonesischen Bohnen).", "Email me": "E-Mail schreiben", "© 2026 Arief Rachim Saputra": "© 2026 Arief Rachim Saputra", "Jakarta → Lippstadt, one sprint at a time": "Jakarta → Lippstadt, ein Sprint nach dem anderen", "Travel Tech · Via Indonesia": "Travel Tech · Via Indonesia", "Fintech · Komunal": "Fintech · Komunal", "Agritech · Koltiva": "Agrartechnologie · Koltiva", "Automotive · Mercedes-Benz Indonesia": "Automobilindustrie · Mercedes-Benz Indonesia", "Manufacturing": "Produktion", "Indonesia": "Indonesien", "Remote": "Remote", "Lippstadt, DE": "Lippstadt, DE", "Open to Werkstudent roles": "Offen für Werkstudentenstellen", "Roadmap": "Roadmap", "PRD / BRD": "PRD / BRD", "Wireframing": "Wireframing", "UAT": "UAT", "Product Management · Binar Academy": "Produktmanagement · Binar Academy", "Digital Marketing · RevoU": "Digitales Marketing · RevoU", "ARS · PRODUCT × ENGINEERING": "ARS · PRODUKT × ENGINEERING", "ARIEF RACHIM SAPUTRA · PRODUCT MANAGER & INDUSTRIAL ENGINEER": "ARIEF RACHIM SAPUTRA · PRODUKTMANAGER & WIRTSCHAFTSINGENIEUR", "Werkstudent @ Metcon GmbH": "Werkstudent bei Metcon GmbH", "Hamm, NRW, Germany": "Hamm, NRW, Deutschland", "Jakarta": "Jakarta", ", with an industrial engineering degree from Swiss German University and a curiosity about how things get made. That curiosity took me to a paper mill, a Mercedes-Benz warehouse, a Master of Management at Universitas Indonesia — and eventually, somewhat unexpectedly, into software.": ", mit einem Abschluss in Wirtschaftsingenieurwesen der Swiss German University und meiner Neugier darauf, wie Dinge hergestellt werden. Diese Neugier führte mich in eine Papierfabrik, in ein Mercedes-Benz-Lager, zum Master of Management an der Universitas Indonesia und schließlich – etwas unerwartet – in die Softwarebranche.", "Koltiva": "Koltiva", ", I helped farmers' cocoa and coffee become traceable for buyers like Cargill, Mars and Nestlé. At": ", half ich dabei, Kakao und Kaffee von Landwirten für Abnehmer wie Cargill, Mars und Nestlé rückverfolgbar zu machen. Bei", "Komunal": "Komunal", "Via Indonesia": "Via Indonesia", "Soest in Germany": "Soest in Deutschland", "Soest, Germany": "Soest, Deutschland", "Metcon GmbH & Co. KG · Manufacturing": "Metcon GmbH & Co. KG · Produktion", "PT Adya Tours — Via Indonesia · Travel Technology": "PT Adya Tours — Via Indonesia · Reisetechnologie", "PT Komunal Finansial Indonesia · Fintech": "PT Komunal Finansial Indonesia · Fintech", "PT Koltiva · Agriculture Technology (B2B)": "PT Koltiva · Agrartechnologie (B2B)", "Voith Paper Rolls Indonesia · Manufacturing": "Voith Paper Rolls Indonesia · Produktion", "Metcon GmbH (Lippstadt, exchange semester) · Mercedes-Benz Indonesia": "Metcon GmbH (Lippstadt, Auslandssemester) · Mercedes-Benz Indonesia", "M.Sc. Advanced Engineering & Engineering Management": "M.Sc. Advanced Engineering & Engineering Management", "Fachhochschule Südwestfalen, Soest, Germany · Focus: project management, lean manufacturing, change management, digitalisation": "Fachhochschule Südwestfalen, Soest, Deutschland · Schwerpunkte: Projektmanagement, Lean Manufacturing, Change Management und Digitalisierung", "Master of Management": "Master of Management", "Universitas Indonesia · Final grade: 3.26/4.00 (approx. 2.1 German scale) · Thesis: The Effect of Digital Advertising on Purchase Intention": "Universitas Indonesia · Abschlussnote: 3,26/4,00 (ca. 2,1 im deutschen Notensystem) · Abschlussarbeit: Der Einfluss digitaler Werbung auf die Kaufabsicht", "B.Eng. Industrial Engineering": "B.Eng. Wirtschaftsingenieurwesen", "Swiss German University, Indonesia · Final grade: 3.16/4.00 (approx. 2.3 German scale) · incl. double-degree exchange semester at FH Südwestfalen (2015) · Thesis: Analysis of Factory Warehouse Design at Mercedes-Benz Indonesia": "Swiss German University, Indonesien · Abschlussnote: 3,16/4,00 (ca. 2,3 im deutschen Notensystem) · einschließlich Double-Degree-Auslandssemester an der FH Südwestfalen (2015) · Abschlussarbeit: Analyse der Lagergestaltung bei Mercedes-Benz Indonesia", "Indonesian": "Indonesisch", "English": "Englisch", "German": "Deutsch", "Hamm, NRW · Germany": "Hamm, NRW · Deutschland", "GDS integration": "GDS-Integration", "Search performance": "Suchperformance", "Data accuracy": "Datengenauigkeit", "Workflow automation": "Workflow-Automatisierung", "B2B SaaS": "B2B-SaaS", "Field ops": "Außendienst", "Digital payments": "Digitale Zahlungen", "Layout planning": "Layoutplanung", "Logistics": "Logistik", "Lean": "Lean Management"};
+  const originalTitle = document.title;
+  const originalDescription = document.querySelector('meta[name="description"]')?.content || "";
+  const titleDE = "Arief Rachim Saputra — Produktmanager & Wirtschaftsingenieur";
+  const descriptionDE = "Produktmanager und Wirtschaftsingenieur mit fünf Jahren Erfahrung in Fintech, Agrartechnologie und Travel Tech. Masterstudent an der Fachhochschule Südwestfalen in Deutschland. Offen für Werkstudentenstellen.";
+  const originalNodes = new WeakMap();
+  const languageButtons = document.querySelectorAll(".language-btn");
+  function setLanguage(language) {
+    const german = language === "de";
+    document.documentElement.lang = language;
+    document.title = german ? titleDE : originalTitle;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.content = german ? descriptionDE : originalDescription;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      if (!originalNodes.has(node)) originalNodes.set(node, node.nodeValue);
+      const original = originalNodes.get(node);
+      const trimmed = original.trim();
+      if (!trimmed) continue;
+      const translated = german ? translations[trimmed] : null;
+      if (german && translated) node.nodeValue = original.replace(trimmed, translated);
+      else node.nodeValue = original;
+    }
+    languageButtons.forEach(button => {
+      const active = button.dataset.lang === language;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    try { localStorage.setItem("arief-portfolio-language", language); } catch (e) {}
+  }
+  languageButtons.forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
+  let preferred = "en";
+  try { preferred = localStorage.getItem("arief-portfolio-language") || "en"; } catch (e) {}
+  setLanguage(preferred === "de" ? "de" : "en");
+})();
+</script>
+
+</body>
+</html>
